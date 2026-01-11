@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Timnit's Recipe</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <h1 class="logo">Timnit’s Recipe</h1>
+
+    <!-- Hamburger -->
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav class="nav-menu">
+      <a href="index.html#recipes">Recipes</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Traditional Ethiopian Recipes</h2>
+    <p>Rooted in culture. Made with love. Passed through generations.</p>
+    <a href="#recipes" class="btn">Explore Recipes</a>
+  </div>
+</section>
+
+
+  <!-- Recipes Section -->
+  <section class="section" id="recipes">
+    <div class="container">
+      <h2 class="section-title">Featured Recipes</h2>
+
+      <div class="recipe-grid">
+       <div class="recipe-card">
+  <img src="shiro.jpg" alt="Shiro" class="recipe-image">
+
+  <h3>Shiro</h3>
+  <p>
+    A comforting chickpea stew, rich in flavor and perfect with injera.
+  </p>
+
+ <a href="shiro.html" class="card-link">View Recipe</a>
+
+</div>
+
+
+        <div class="recipe-card">
+  <img src="doro.jpg" alt="Doro Wot" class="recipe-image">
+
+  <h3>Doro Wot</h3>
+  <p>
+    Ethiopia’s iconic chicken stew, slow-cooked with berbere and spices.
+  </p>
+
+  <a href="doro-wot.html" class="card-link">View Recipe</a>
+
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title">About Timnit’s Recipe</h2>
+      <p>
+        Timnit’s Recipe is a personal collection of Ethiopian dishes inspired
+        by home cooking, family traditions, and Habesha soul. Each recipe is
+        written simply, respectfully, and with love for culture and flavor.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p>
+        Have a question, suggestion, or want to share a recipe?
+      </p>
+      <form class="contact-form">
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Your Email" required>
+  <textarea placeholder="Your Message" rows="5" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Timnit’s Recipe • Made with Habesha soul 🌻</p>
+  </footer>
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    });
+  });
+</script>
+
+</body>
+</html>

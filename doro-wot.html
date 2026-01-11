@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doro Wot | Timnit’s Recipe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-content">
+    <h1 class="logo">Timnit’s Recipe</h1>
+
+    <!-- Hamburger -->
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#recipes">Recipes</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- Recipe Hero -->
+  <section class="recipe-hero">
+    <h2>Doro Wot</h2>
+    <p>Ethiopia’s iconic spicy chicken stew</p>
+  </section>
+
+  <!-- Recipe Content -->
+  <section class="recipe-detail">
+    <div class="container recipe-box">
+
+      <img src="doro.jpg" alt="Doro Wot" class="recipe-detail-image">
+
+      <div class="recipe-text">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 kg chicken, cleaned</li>
+          <li>4 onions, finely chopped</li>
+          <li>3 tbsp berbere</li>
+          <li>3 tbsp niter kibbeh</li>
+          <li>2 cloves garlic</li>
+          <li>2 boiled eggs</li>
+          <li>Salt to taste</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+          <li>Cook onions slowly until deeply browned.</li>
+          <li>Add niter kibbeh and berbere.</li>
+          <li>Add chicken and simmer gently.</li>
+          <li>Add garlic and salt.</li>
+          <li>Add boiled eggs before serving.</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Timnit’s Recipe • Made with Habesha soul 🌻</p>
+  </footer>
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    });
+  });
+</script>
+
+
+</body>
+</html>
